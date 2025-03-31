@@ -5,6 +5,7 @@ import "./globals.css";
 import { LazyMotion, domAnimation } from "motion/react";
 import { Suspense } from "react";
 import Loading from "./loading";
+import Head from "next/head";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -51,6 +52,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="h-full scroll-smooth">
+      <Head>
+        {/* preload the `/radial-glass.spline` file */}
+        <link rel="preload" href="/radial-glass.spline" as="fetch" />
+      </Head>
       <body
         className={`h-full antialiased relative ${geistSans.className} bg-black`}
       >
