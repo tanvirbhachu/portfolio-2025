@@ -4,6 +4,8 @@ import { RadialGlass } from "@/components/ui/radial-glass";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import {
   Auth0,
+  Biomejs,
+  Docker,
   DrizzleORM,
   Figma,
   Git,
@@ -11,9 +13,12 @@ import {
   JavaScript,
   MaterialUI,
   MongoDB,
+  Motion,
+  Neon,
   Netlify,
   Nextjs,
   Nodejs,
+  Nx,
   PlanetScale,
   PostgreSQL,
   PostHog,
@@ -30,6 +35,7 @@ import {
   Stripe,
   Supabase,
   TailwindCSS,
+  Turso,
   TypeScript,
   Vercel,
 } from "@/lib/icons";
@@ -321,8 +327,8 @@ function About() {
             <p>
               Outside of tech, I&apos;m pretty much just out there in the world
               doing random side quests. Like fishing, traveling, creating a very
-              money-unfriendly Lego collection or taste-testing every restaurant
-              in Perth, Australia.
+              financially-unhealthy Lego collection or taste-testing every
+              restaurant in Perth, Australia.
             </p>
           </div>
         </div>
@@ -464,6 +470,14 @@ const skills = {
       icon: Redis,
       title: "Redis",
     },
+    {
+      icon: Biomejs,
+      title: "Biome",
+    },
+    {
+      icon: Motion,
+      title: "Motion",
+    },
   ],
   other: [
     {
@@ -506,6 +520,34 @@ const skills = {
     {
       icon: Storybook,
       title: "Storybook",
+    },
+    {
+      icon: null,
+      title: "Styled Components",
+    },
+    {
+      icon: Neon,
+      title: "Neon",
+    },
+    {
+      icon: Nx,
+      title: "Nx",
+    },
+    {
+      icon: Turso,
+      title: "Turso",
+    },
+    {
+      icon: null,
+      title: "HeadlessUI",
+    },
+    {
+      icon: Docker,
+      title: "Docker",
+    },
+    {
+      icon: null,
+      title: "Medusa",
     },
   ],
 } as const;
