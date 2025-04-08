@@ -86,6 +86,11 @@ export const blockContentType = defineType({
             ],
           },
         },
+        {
+          name: "content",
+          title: "Content",
+          type: "text",
+        },
       ],
     }),
   ],

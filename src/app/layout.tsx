@@ -42,7 +42,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://tanvirbhachu.dev",
   },
-  robots: "index, follow",
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
@@ -57,7 +60,7 @@ export default function RootLayout({
         <link rel="preload" href="/radial-glass.spline" as="fetch" />
       </Head>
       <body
-        className={`h-full antialiased relative ${geistSans.className} bg-black`}
+        className={`h-full antialiased relative ${geistSans.className} bg-background dark`}
       >
         <Suspense fallback={<Loading />}>
           <LazyMotion features={domAnimation} strict>

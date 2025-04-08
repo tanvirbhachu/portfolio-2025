@@ -40,7 +40,7 @@ export const TextGenerateEffect = ({
           return (
             <m.span
               key={word + idx}
-              className="text-white opacity-0"
+              className="text-neutral-100 opacity-0"
               style={{
                 filter: filter ? "blur(10px)" : "none",
               }}

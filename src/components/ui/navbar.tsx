@@ -1,39 +1,46 @@
 "use client";
 
-import { m } from "motion/react";
+import { socials } from "@/lib/social";
 import Link from "next/link";
 
 export function Navbar() {
   return (
-    <m.div
-      initial={{ opacity: 0, scale: 0, y: -50 }}
-      animate={{ opacity: 1, scale: 1, y: 0 }}
-      className="border flex border-neutral-800 rounded-xl shadow-sm w-fit mx-auto pointer-events-auto bg-black"
-    >
-      <Link
-        className="p-3 px-4 block text-sm opacity-70 hover:opacity-100 transition-all ease-in-out"
-        href="#home"
-      >
-        Home
-      </Link>
-      <Link
-        className="p-3 px-4 block text-sm opacity-70 hover:opacity-100 transition-all ease-in-out"
-        href="#projects"
-      >
-        Projects
-      </Link>
-      <Link
-        className="p-3 px-4 block text-sm opacity-70 hover:opacity-100 transition-all ease-in-out"
-        href="#work"
-      >
-        Work
-      </Link>
-      <Link
-        className="p-3 px-4 block text-sm opacity-70 hover:opacity-100 transition-all ease-in-out"
-        href="#about"
-      >
-        About
-      </Link>
-    </m.div>
+    <div className="max-w-5xl mx-auto bg-background text-foreground w-full border-b border-x flex justify-between pointer-events-auto">
+      <div className="flex items-center">
+        <Link
+          className="h-12 flex items-center px-4 text-sm opacity-70 hover:opacity-100 transition-all ease-in-out"
+          href="/"
+        >
+          Portfolio
+        </Link>
+        <Link
+          className="h-12 flex items-center px-4 text-sm opacity-70 hover:opacity-100 transition-all ease-in-out"
+          href="/blog"
+        >
+          Blog
+        </Link>
+      </div>
+
+      <div className="flex items-center gap-0.5">
+        <Link
+          className="h-12 flex items-center px-2 text-sm opacity-70 hover:opacity-100 transition-all ease-in-out"
+          href={socials.x.url}
+        >
+          <socials.x.icon size={20} />
+        </Link>
+        <Link
+          className="h-12 flex items-center px-2 text-sm opacity-70 hover:opacity-100 transition-all ease-in-out"
+          href={socials.linkedin.url}
+        >
+          <socials.linkedin.icon size={20} />
+        </Link>
+        <Link
+          className="h-12 flex items-center px-2 text-sm opacity-70 hover:opacity-100 transition-all ease-in-out"
+          href={socials.github.url}
+        >
+          <socials.github.icon size={20} />
+        </Link>
+      </div>
+    </div>
   );
 }
