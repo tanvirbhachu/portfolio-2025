@@ -43,15 +43,15 @@ async function Posts({ page }: { page: number }) {
           className="relative grid grid-cols-1 border-b last:border-b-0 py-6 max-sm:gap-3 sm:grid-cols-3"
         >
           <div>
-            <div className="text-sm/5 max-sm:text-gray-700 sm:font-medium px-5">
+            <div className="text-sm/5 max-sm:text-gray-300 sm:font-medium px-5">
               {post.publishedAt
                 ? format(new Date(post.publishedAt), "dd MMM, yyyy")
                 : "Unknown published date"}
             </div>
           </div>
-          <div className="sm:col-span-2 sm:max-w-2xl">
+          <div className="sm:col-span-2 sm:max-w-2xl px-5">
             <h2 className="text-sm/5 font-medium">{post.title}</h2>
-            <p className="mt-3 text-sm/6 text-gray-500">{post.excerpt}</p>
+            <p className="mt-3 text-sm/6 text-gray-400">{post.excerpt}</p>
             <div className="mt-4">
               <Link
                 href={`/blog/${post.slug}`}
