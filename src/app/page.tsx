@@ -54,7 +54,7 @@ const orbitron = Orbitron({
 function Hero() {
   return (
     <div id="#home" className="h-full">
-      <div className="absolute inset-0 pointer-events-none">
+      <div className="absolute inset-0 pointer-events-none bg-black">
         <RadialGlass />
       </div>
 
