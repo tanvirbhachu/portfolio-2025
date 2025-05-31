@@ -16,6 +16,9 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
 
+// Revalidate every 6 hours (21600 seconds)
+export const revalidate = 21600;
+
 export async function generateMetadata({
   params,
 }: {
@@ -56,6 +59,12 @@ export async function generateMetadata({
       title: post.title,
       description: post.excerpt,
       type: "article",
+      images: url.toString(),
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.excerpt,
       images: url.toString(),
     },
   };

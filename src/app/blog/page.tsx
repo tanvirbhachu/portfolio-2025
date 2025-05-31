@@ -13,6 +13,9 @@ import { Orbitron } from "next/font/google";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
+// Revalidate every 1 hour (3600 seconds)
+export const revalidate = 3600;
+
 export const metadata: Metadata = {
   title: "Blog",
   description:
