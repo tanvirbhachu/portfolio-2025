@@ -48,6 +48,8 @@ import {
   PenNibStraight,
   Smiley,
   SunHorizon,
+  CloudLightning,
+  ShoppingCart,
 } from "@phosphor-icons/react/dist/ssr";
 import { Orbitron } from "next/font/google";
 import Link from "next/link";
@@ -71,7 +73,7 @@ function Hero() {
           </h1>
 
           <TextGenerateEffect
-            words="Full-stack Web Developer, founder, and designer."
+            words="The Full-Stack 'Hidden Gem' You've Been Searching For"
             className={cn(
               orbitron.className,
               "text-4xl md:text-6xl font-bold uppercase text-left max-w-7xl"
@@ -79,10 +81,11 @@ function Hero() {
           />
 
           <p className="text-base max-w-xl text-left mt-8 opacity-80 animate-in fade-in-0 duration-1000">
-            Hey, I&apos;m Tanvir, a web developer and designer. I&apos;m the
-            creator of Jadebook, a web platform for journaling and growth.
-            I&apos;ve been coding ever since I was 12 years old so I&apos;ve
-            been doing this for a while now.
+            Hey, I'm Tanvir, a full-stack web developer and designer. As the
+            creator of Jadebook, a cutting-edge journaling SaaS, I bring 8 years
+            of deep experience building robust and intuitive web platforms. I've
+            been immersed in code since I was 13, constantly pushing the
+            boundaries of what's possible.
           </p>
         </div>
       </div>
@@ -116,6 +119,14 @@ const projects = [
     icon: Notebook,
   },
   {
+    name: "Ecommerce site",
+    description:
+      "Built a ecommerce site using MedusaJS and hosted on Railway. Just wanted to try out some new tech and see how it works.",
+    date: "2024",
+    link: null,
+    icon: ShoppingCart,
+  },
+  {
     name: "New Tab",
     description:
       "Created this back when customizable new tabs weren't really a thing. You can still look at it but I wasn't the greatest at UI back then.",
@@ -131,20 +142,28 @@ const projects = [
     link: null,
     icon: Smiley,
   },
+  {
+    name: "Storm",
+    description:
+      "A project I did with a friend for a national competition. It used machine learning to predict the trajectories of hurricanes. We got 2nd place.",
+    date: "2020",
+    link: null,
+    icon: CloudLightning,
+  },
 ] as const;
 
 const work = [
   {
     name: "Omny Studio",
     description:
-      "A really cool platform for enterprise podcasting. Their pretty popular in the podcasting community and rightfully so.",
+      "A highly regarded platform pivotal to the enterprise podcasting community, where I contributed to a production-level content platform.",
     date: "2022 - 2024",
     link: "https://omnystudio.com/learn",
   },
   {
     name: "Triton Digital",
     description:
-      "Parent company of Omny Studio. I got to work on their ad platform and learnt a lot about enterprise-level development, type-safety, and more.",
+      "The parent company of Omny Studio, here I gained deep expertise in enterprise ad platform development, emphasizing robust type-safety and scalable architecture.",
     date: "2023 - 2024",
     link: "https://tritondigital.com/",
   },
@@ -231,7 +250,7 @@ function Projects() {
           </Link>
         ))}
 
-        <div className="flex w-full h-full border-b relative overflow-hidden">
+        <div className="flex w-full h-full min-h-54 border-b relative overflow-hidden lg:col-span-2">
           <div className="absolute inset-0">
             <AuroraBackground>
               <div className="size-full"></div>
@@ -312,23 +331,23 @@ function About() {
         <div className="p-6 border-b flex flex-col">
           <div className="space-y-7 text-sm text-neutral-300">
             <p>
-              My journey started when I had to rebuild the PlayStation website
-              from scratch (in my own design) for a school project and stumbled
-              upon my passion for web development. Now, I use some pretty cool
-              tech like React, Next.js, TailwindCSS, Framer Motion, etc, to
-              build functional, performant and really good looking websites.
+              My path to web development started at 13, recreating the
+              PlayStation website for a school assignment. Since then, I’ve
+              mastered modern tech like React, Next.js, and TailwindCSS to build
+              applications that are not just performant and functional, but also
+              look really nice.
             </p>
             <p>
-              I&apos;ve mostly worked on the frontend, creating landing pages,
-              platforms, dashboard or just some cool, general stuff. But
-              I&apos;ve also played around with databases, servers, APIs,
-              virtual machines etc.
+              I'm mainly a frontend developer, I’ve designed a bunch of UIs,
+              from sleek landing pages to intricate platforms. But my expertise
+              extends to backend systems, including databases, server
+              management, and API design.
             </p>
             <p>
-              Outside of tech, I&apos;m pretty much just out there in the world
-              doing random side quests. Like fishing, traveling, creating a very
-              financially-unhealthy Lego collection or taste-testing every
-              restaurant in Perth, Australia.
+              Beyond the screen, I like completing <i>"side quests"</i> –
+              whether it's fishing, exploring new destinations, curating a
+              significant Lego collection, or playing board games. Because life
+              should be enjoyed
             </p>
           </div>
         </div>
@@ -553,6 +572,12 @@ const skills = {
 } as const;
 
 export default function Page() {
+  function Divider() {
+    return (
+      <div className="relative max-w-5xl border-x border-b w-full mx-auto h-16"></div>
+    );
+  }
+
   return (
     <div className="w-full text-white">
       <div className="fixed w-full pointer-events-none z-50 px-5">
@@ -564,16 +589,17 @@ export default function Page() {
           <Hero />
         </div>
 
-        <div className="relative max-w-5xl border-x border-b w-full mx-auto h-8"></div>
+        <Divider />
 
         <div className="relative max-w-5xl border-x border-b w-full mx-auto p-5 md:p-8 space-y-4">
           <h2 className="text-4xl font-bold uppercase max-w-3xl">
             Things I&apos;ve worked on
           </h2>
-          <p className="text-neutral-400 max-w-lg">
-            I’ve worked on tons of little projects over the years but these are
-            the ones that I’m most proud of. Not all of them are open-source,
-            but they do show what I can do :)
+          <p className="text-neutral-400 max-w-xl">
+            While I've built countless projects, these are the flagship
+            creations that best showcase my diverse capabilities and passion for
+            innovation. Some are open-source, all demonstrate my commitment to
+            impactful development.
           </p>
         </div>
 
@@ -581,16 +607,16 @@ export default function Page() {
           <Projects />
         </div>
 
-        <div className="relative max-w-5xl border-x border-b w-full mx-auto h-8"></div>
+        <Divider />
 
         <div className="relative max-w-5xl border-x border-b w-full mx-auto p-5 md:p-8 space-y-4">
           <h2 className="text-4xl font-bold uppercase max-w-3xl">
             My experience in the industry
           </h2>
-          <p className="text-neutral-400 max-w-lg">
-            I&apos;ve worked in the industry for a while now and I&apos;ve had
-            the opportunity to work with some incredible people on some
-            incredible projects.
+          <p className="text-neutral-400 max-w-xl">
+            I've had the privilege of contributing to the industry through roles
+            that fostered significant growth, working alongside exceptional
+            teams on impactful and innovative initiatives.
           </p>
         </div>
 
@@ -598,7 +624,7 @@ export default function Page() {
           <Work />
         </div>
 
-        <div className="relative max-w-5xl border-x border-b w-full mx-auto h-8"></div>
+        <Divider />
 
         <div className="relative max-w-5xl border-x border-b w-full mx-auto p-5 md:p-8 space-y-4">
           <h2 className="text-4xl font-bold uppercase max-w-3xl">
@@ -610,16 +636,16 @@ export default function Page() {
           <About />
         </div>
 
-        <div className="relative max-w-5xl border-x border-b w-full mx-auto h-8"></div>
+        <Divider />
 
         <div className="relative max-w-5xl border-x border-b w-full mx-auto p-5 md:p-8 space-y-4">
           <h2 className="text-4xl font-bold uppercase max-w-3xl">
             Technologies I've used
           </h2>
-          <p className="text-neutral-400 max-w-lg">
-            Over the years, I have worked with a variety of technologies.
-            Thought it'd be a good to keep track. Here are some of the
-            technologies I have experience with:
+          <p className="text-neutral-400 max-w-xl">
+            Over my 8 years in development, I've played around with a broad
+            spectrum of technologies, constantly expanding my toolkit. Below is
+            a decent overview of the technologies I use all the time:
           </p>
         </div>
 
@@ -638,9 +664,9 @@ export default function Page() {
         </div>
 
         <div className="relative max-w-5xl border-x border-b w-full mx-auto p-5 md:p-8 space-y-4">
-          <p className="text-neutral-400 max-w-lg text-sm">
+          <p className="text-neutral-400 max-w-xl text-sm">
             Tech I've used but more for side projects or it's been a long time
-            since I've used them
+            since I've used them:
           </p>
         </div>
 
