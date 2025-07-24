@@ -73,7 +73,7 @@ function Hero() {
           </h1>
 
           <TextGenerateEffect
-            words="The Full-Stack 'Hidden Gem' You've Been Searching For"
+            words="A Developer who does stuff on a fairly regular basis"
             className={cn(
               orbitron.className,
               "text-4xl md:text-6xl font-bold uppercase text-left max-w-7xl"
