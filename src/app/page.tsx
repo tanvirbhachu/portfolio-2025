@@ -94,10 +94,18 @@ function Hero() {
 }
 
 const projects = [
+    {
+    name: "Jadebook Open Source",
+    description:
+      "My first proper, open source project. It's built on NextJS and Supabase, it's got PWA support and it can be quick deployed to Vercel.",
+    date: "2025",
+    link: "https://github.com/Jadebook-Journal/jadebook-oss",
+    icon: PenNibStraight,
+  },
   {
     name: "Jadebook",
     description:
-      "This is my biggest project ever. I create a web journal that has device sync, encryption, AI features, auth, etc. Basically, full SAAS app and anyone can use it.",
+      "This is my biggest project ever. I create a web journal that has device sync, encryption, AI features, auth, etc. Basically, a full SAAS app.",
     date: "2024",
     link: "https://jadebook.app/",
     icon: PenNibStraight,
@@ -250,7 +258,7 @@ function Projects() {
           </Link>
         ))}
 
-        <div className="flex w-full h-full min-h-54 border-b relative overflow-hidden lg:col-span-2">
+        <div className="flex w-full h-full min-h-54 border-b relative overflow-hidden">
           <div className="absolute inset-0">
             <AuroraBackground>
               <div className="size-full"></div>
